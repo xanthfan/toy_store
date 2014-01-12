@@ -1,5 +1,10 @@
-ToyStore::Application.routes.draw do
+ToyStore::Application.routes.draw  do
+  get "carts/index"
+  get "carts/add"
   resources :toys
+
+
+root :to => "toys#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
